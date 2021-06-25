@@ -60,9 +60,17 @@ body{
 
 .title {
     @extend %playfair-bold;
-    font-size: 102px;
     line-height: 1.08;
     color: #23242c;
+    font-size: 60px;
+
+    @media (min-width: 576px) {
+        font-size: 75px;
+    }
+
+    @media (min-width: 768px) {
+        font-size: 102px;
+    }
 
     &__decor{
         width: 56px;
@@ -81,11 +89,13 @@ body{
             text-align: right;
         }
     }
-    @media (max-width: 768px){
-        font-size: 75px;
-    }
-    @media (max-width: 575px){
-        font-size: 60px;
+
+    &--shadow{
+        text-shadow: 0 0 1px rgba(#fff, .6);
+
+        @media (min-width: 575px){
+            text-shadow: none;
+        }
     }
 }
 

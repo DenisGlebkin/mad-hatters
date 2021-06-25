@@ -1,8 +1,9 @@
 .footer {
 	background-color: #23242c;
-	padding: 135px 0 129px;
-	@media (max-width: 768px){
-		padding: 75px 0 50px;
+	padding: 75px 0 50px;
+	
+	@media (min-width: 768px){
+		padding: 135px 0 129px;
 	}
 	// .footer__body
 
@@ -10,30 +11,35 @@
 		display: flex;
 		justify-content: space-between;
 		margin-bottom: 12px;
-		padding-right: 30px;
-		@media (max-width: 768px){
-			flex-wrap: wrap;
-			padding-right: 0;
+		flex-wrap: wrap;
+
+		@media (min-width: 768px){
+			padding-right: 30px;
+			font-weight: nowrap;
 		}
 	}
 
 	// .footer__info
 
 	&__info {
-		flex: 0 0 305px;
-		@media (max-width: 768px){
-			flex: 0 0 100%;
-			text-align: center;
-			margin-bottom: 20px;
+		flex: 0 0 100%;
+		text-align: center;
+		margin-bottom: 20px;
+
+		@media (min-width: 768px){
+			flex: 0 0 305px;
+			margin-bottom: 0;
+			text-align: left;
 		}
 	}
 
 	// .footer__logo
 
 	&__logo {
-		margin-bottom: 32px;
-		@media (max-width: 768px){
-			margin-bottom: 25px;
+		margin-bottom: 25px;
+
+		@media (min-width: 768px){
+			margin-bottom: 32px;
 		}
 	}
 
@@ -41,13 +47,13 @@
 
 	&__slogan {
 		font-weight: 600;
-		font-size: 18px;
+		font-size: 16px;
 		line-height: 1.77em;
 		color: #fff;
-		padding-left: 20px;
-		@media (max-width: 768px){
-			font-size: 16px;
-			padding-left: 0;
+
+		@media (min-width: 768px){
+			font-size: 18px;
+			padding-left: 20px;
 		}
 	}
 
@@ -55,9 +61,12 @@
 
 	&__navigation {
 		display: flex;
-		@media (max-width: 768px){
-			flex: 0 0 100%;
-			justify-content: space-around;
+		flex: 0 0 100%;
+		justify-content: space-around;
+
+		@media (min-width: 768px){
+			flex: 0 1 auto;
+			justify-content: flex-start;
 		}
 	}
 
@@ -65,9 +74,8 @@
 
 	&__navigation-item {
 		&+&{
-			margin-left: 105px;
-			@media (max-width: 768px){
-				margin-left: 0;
+			@media (min-width: 768px){
+				margin-left: 105px;
 			}
 		}
 	}
@@ -76,11 +84,13 @@
 
 	&__copyright {
 		color: rgba($color: #fff, $alpha: .5);
-		font-size: 16px;
+		font-size: 14px;
 		line-height: 2;
-		@media (max-width: 768px){
-			text-align: center;
-			font-size: 14px;
+		text-align: center;
+
+		@media (min-width: 768px){
+			font-size: 16px;
+			text-align: left;
 		}
 	}
 }
@@ -91,7 +101,7 @@
 
 	&__heading {
 		color: #faf7f3;
-		font-size: 24px;
+		font-size: 20px;
 		font-weight: 400;
 		line-height: 1.33em;
 		position: relative;
@@ -107,8 +117,8 @@
 			transform: translateY(-50%);
 		}
 
-		@media (max-width: 768px){
-			font-size: 20px;
+		@media (min-width: 768px){
+			font-size: 24px;
 		}
 	}
 
@@ -126,11 +136,12 @@
 
 	&__item-link {
 		text-decoration: none;
-		font-size: 16px;
+		font-size: 14px;
 		line-height: 2em;
 		color: #fff;
-		@media (max-width: 768px){
-			font-size: 14px;
+		
+		@media (min-width: 768px){
+			font-size: 16px;
 		}
 	}
 }
