@@ -1,0 +1,136 @@
+.footer {
+	background-color: #23242c;
+	padding: 135px 0 129px;
+	@media (max-width: 768px){
+		padding: 75px 0 50px;
+	}
+	// .footer__body
+
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 12px;
+		padding-right: 30px;
+		@media (max-width: 768px){
+			flex-wrap: wrap;
+			padding-right: 0;
+		}
+	}
+
+	// .footer__info
+
+	&__info {
+		flex: 0 0 305px;
+		@media (max-width: 768px){
+			flex: 0 0 100%;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+	}
+
+	// .footer__logo
+
+	&__logo {
+		margin-bottom: 32px;
+		@media (max-width: 768px){
+			margin-bottom: 25px;
+		}
+	}
+
+	// .footer__slogan
+
+	&__slogan {
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 1.77em;
+		color: #fff;
+		padding-left: 20px;
+		@media (max-width: 768px){
+			font-size: 16px;
+			padding-left: 0;
+		}
+	}
+
+	// .footer__navigation
+
+	&__navigation {
+		display: flex;
+		@media (max-width: 768px){
+			flex: 0 0 100%;
+			justify-content: space-around;
+		}
+	}
+
+	// .footer__navigation-item
+
+	&__navigation-item {
+		&+&{
+			margin-left: 105px;
+			@media (max-width: 768px){
+				margin-left: 0;
+			}
+		}
+	}
+
+	// .footer__copyright
+
+	&__copyright {
+		color: rgba($color: #fff, $alpha: .5);
+		font-size: 16px;
+		line-height: 2;
+		@media (max-width: 768px){
+			text-align: center;
+			font-size: 14px;
+		}
+	}
+}
+
+.navigation {
+	padding-left: 22px;
+	// .navigation__heading
+
+	&__heading {
+		color: #faf7f3;
+		font-size: 24px;
+		font-weight: 400;
+		line-height: 1.33em;
+		position: relative;
+		&::before{
+			content: "";
+			display: block;
+			width: 9px;
+			height: 9px;
+			background: url(../images/icons/dots_decoration.svg) no-repeat 0 0;
+			position: absolute;
+			left: -22px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		@media (max-width: 768px){
+			font-size: 20px;
+		}
+	}
+
+	// .navigation__list
+
+	&__list {}
+
+	// .navigation__item
+
+	&__item {
+		margin-top: 13px;
+	}
+
+	// .navigation__item-link
+
+	&__item-link {
+		text-decoration: none;
+		font-size: 16px;
+		line-height: 2em;
+		color: #fff;
+		@media (max-width: 768px){
+			font-size: 14px;
+		}
+	}
+}

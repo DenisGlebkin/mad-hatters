@@ -1,0 +1,38 @@
+.burger-menu {
+	width: 30px;
+	height: 20px;
+	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+	&--active {
+		justify-content: center;
+
+		.burger-menu__line{
+			background-color: #1A1917;
+		}
+		.burger-menu__line:first-child {
+			transform: rotate(45deg);
+			margin-bottom: -1px;
+		}
+
+		.burger-menu__line:last-child {
+			transform: rotate(135deg);
+			margin-top: -1px;
+		}
+
+		.burger-menu__line:nth-child(2) {
+			transform: rotate(135deg);
+			height: 0;
+			opacity: 0;
+		}
+	}
+
+	&__line {
+		width: 100%;
+		height: 2px;
+		background-color: #23242c;
+		transition: all .5s;
+	}
+}

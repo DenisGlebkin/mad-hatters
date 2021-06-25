@@ -1,0 +1,65 @@
+.quote {
+	padding: 158px 0 97px;
+	@media (max-width: 768px){
+		padding: 100px 0;
+	}
+	@media (max-width: 575px){
+		padding: 70px 0;
+	}
+	// .quote__body
+
+	&__body {
+		min-height: 518px;
+		background: url(../images/quote/quote_bg.svg) no-repeat center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@media (max-width: 575px){
+			max-width: calc(100% + 30px);
+			margin: 0 -15px;
+		}
+	}
+
+	// .quote__quote
+
+	&__quote {
+		@extend %playfair-bold;
+		font-size: 48px;
+		line-height: 1.33;
+		color: #23242C;
+		position: relative;
+		max-width: 65.5%;
+		text-align: center;
+
+		&::before,
+		&::after{
+			content: "";
+			display: block;
+			width: 86px;
+			height: 64px;
+			background: url(../images/icons/quotation_marks.svg) no-repeat 0 0;
+			position: absolute;
+		}
+		&::before{
+			top: -35px;
+			left: -55px;
+			transform: rotate(180deg);
+		}
+		&::after{
+			right: -60px;
+			bottom: -32px;
+		}
+
+		@media (max-width: 768px){
+			font-size: 40px;
+		}
+		@media (max-width: 575px){
+			&::before{
+				left: -50px;
+			}
+			&::after{
+				right: -50px;
+			}
+		}
+	}
+}
