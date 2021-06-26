@@ -98,10 +98,28 @@ ul.menu__list{
 	// .menu__item-link
 
 	&__item-link {
+		display: inline-block;
 		color: #23242C;
 		font-size: 16px;
 		line-height: 2;
 		text-decoration: none;
+		position: relative;
+		transition: transform	.3s;
+
+		@media (any-hover: hover){
+			&::before{
+				content: attr(data-item);
+				display: inline-block;
+				position: absolute;
+				top: 100%;
+				left: 0;
+				color: #967675;
+			}
+
+			&:hover{
+				transform: translateY(-100%);
+			}
+		}
 	}
 }
 

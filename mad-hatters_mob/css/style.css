@@ -188,6 +188,29 @@ body {
   z-index: -1;
 }
 
+.btn-primary__text {
+  position: relative;
+}
+
+.btn-primary__text::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  background-color: #cfadac;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.btn-primary:hover .btn-primary__text::before {
+  width: 100%;
+  height: 1px;
+}
+
 .logo {
   display: inline-block;
 }
@@ -325,17 +348,10 @@ ul.menu__list {
 }
 
 .menu__item-link {
-  display: inline-block;
   color: #23242C;
   font-size: 16px;
   line-height: 2;
   text-decoration: none;
-  position: relative;
-  -webkit-transition: -webkit-transform	.3s;
-  transition: -webkit-transform	.3s;
-  -o-transition: transform	.3s;
-  transition: transform	.3s;
-  transition: transform	.3s, -webkit-transform	.3s;
 }
 
 .hero {
@@ -344,7 +360,7 @@ ul.menu__list {
 
 .hero__body {
   max-width: calc(100% + 30px);
-  padding: 0 0 70px 15px;
+  padding: 0 15px 70px 15px;
   margin: 0 -15px;
   background: url(../images/hero/hero_bg.png) no-repeat right 25px;
   min-height: 601px;
@@ -1162,46 +1178,6 @@ ul.menu__list {
     scroll-behavior: auto !important;
   }
 }
-
-@media (any-hover: hover) {
-  .btn-primary__text {
-    position: relative;
-  }
-
-  .btn-primary__text::before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 0;
-    background-color: #cfadac;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    -webkit-transition: all .3s;
-    -o-transition: all .3s;
-    transition: all .3s;
-  }
-
-  .btn-primary:hover .btn-primary__text::before {
-    width: 100%;
-    height: 1px;
-  }
-
-  .menu__item-link::before {
-    content: attr(data-item);
-    display: inline-block;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    color: #967675;
-  }
-
-  .menu__item-link:hover {
-    -webkit-transform: translateY(-100%);
-        -ms-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
-}
 @supports (-webkit-appearance:none){
 .hero__body{background:url(../images/hero/hero_bg.webp) no-repeat right 25px}
 .list__item-heading::before{background:url(../images/icons/dots_decoration.svg) no-repeat 0 0}
@@ -1251,14 +1227,6 @@ ul.menu__list {
 }
 
  @media (prefers-reduced-motion: reduce){
-
-@supports (-webkit-appearance:none){
-
-}
-
-}
-
- @media (any-hover: hover){
 
 @supports (-webkit-appearance:none){
 
